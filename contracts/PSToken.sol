@@ -31,4 +31,14 @@ contract PSToken
 
         return true;
     }
+    function transferFrom(address _from, address _to, uint256 _value) public returns (bool)
+    {
+            require(_value<=balanceOf[_from]);//require _from has enough tokens
+            require(_value<=allowance[_from][msg.sender]);//require allowance from than value
+           balanceOf[_from]-=_value;
+            balanceOf[_to]+=_value;
+            allowance[_from][msg.sender]-=_value;
+            emit Transfer(_from,_to,_value);
+            return true;
+    }
 }
