@@ -1,0 +1,17 @@
+{
+  "name": "PS-token-sale",
+  "version": "1.0.0",
+  "description": "PS Token Sale ICO",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "author": "Parshwa Shah",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}

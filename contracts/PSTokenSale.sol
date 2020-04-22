@@ -1,7 +1,7 @@
 pragma solidity >=0.4.21 <0.7.0;
 import "./PSToken.sol";
 contract PSTokenSale{
-    address  payable admin;
+    address payable admin;
     PSToken public tokenContract;
     uint256 public tokenPrice;
     uint256 public tokensSold;
