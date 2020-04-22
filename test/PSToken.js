@@ -91,6 +91,13 @@ contract('PSToken',function(accounts){
       return tokenInstance.transferFrom.call(fromAccount,toAccount,20,{from:spendingAccount});
     }).then(function(success){
       assert.equal(success,true);
+      return tokenInstance.transferFrom(fromAccount,toAccount,999,{from:spendingAccount});
+    }).then(assert.fail).catch(function(error){
+      assert(error.message.indexOf('revert'),'cant send amount larger than balance');
+      //try to send larger than approved allowance
+      return tokenInstance.transferFrom(fromAccount,toAccount,20,{from:spendingAccount});
+    }).then(assert.fail).catch(function(error){
+      assert(error.message.indexOf('revert'),'cant send amount larger than aproved amount');
       return tokenInstance.transferFrom(fromAccount,toAccount,10,{from:spendingAccount});
     }).then(function(receipt){
       assert.equal(receipt.logs.length, 1, 'triggers one event');
@@ -104,6 +111,7 @@ contract('PSToken',function(accounts){
         return tokenInstance.balanceOf(toAccount);
     }).then(function(balance){
       assert.equal(balance.toNumber(),10,'adds the amount from sending account');
+      return tokenInstance.allowance(fromAccount,spendingAccount);
     }).then(function(allowance){
         assert.equal(allowance.toNumber(),0,'deducts the amount from allowance');
     });

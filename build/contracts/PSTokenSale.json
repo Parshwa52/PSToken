@@ -1,0 +1,191 @@
+{
+  "contractName": "PSTokenSale",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/F/Project10Token/token_sale/contracts/PSTokenSale.sol\":\"PSTokenSale\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/F/Project10Token/token_sale/contracts/PSTokenSale.sol\":{\"keccak256\":\"0xbae5fc4d5055d2554aa394ece69a9b964bcb940916b158c79519033f2cfe6f32\",\"urls\":[\"bzz-raw://7698a8ab7a37489b5956dd18275ce1549931dd68e5abe902f7718640f392b737\",\"dweb:/ipfs/QmTArxAGLUiS3U9M8PEgrSs4QdHkiz1gAziFKepEryvW1T\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158204b0ed3e1ca9ddefde87fe434e3d3693724b826b1cb6233e9042725ebdd5822ba64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158204b0ed3e1ca9ddefde87fe434e3d3693724b826b1cb6233e9042725ebdd5822ba64736f6c63430005100032",
+  "sourceMap": "36:66:2:-;;;63:36;8:9:-1;5:2;;;30:1;27;20:12;5:2;63:36:2;36:66;;;;;;",
+  "deployedSourceMap": "36:66:2:-;;;;;",
+  "source": "pragma solidity >=0.4.21 <0.7.0;\r\n\r\ncontract PSTokenSale{\r\n    constructor() public\r\n    {\r\n\r\n    }\r\n}",
+  "sourcePath": "F:\\Project10Token\\token_sale\\contracts\\PSTokenSale.sol",
+  "ast": {
+    "absolutePath": "/F/Project10Token/token_sale/contracts/PSTokenSale.sol",
+    "exportedSymbols": {
+      "PSTokenSale": [
+        229
+      ]
+    },
+    "id": 230,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 224,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 229,
+        "linearizedBaseContracts": [
+          229
+        ],
+        "name": "PSTokenSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 227,
+              "nodeType": "Block",
+              "src": "89:10:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 228,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 225,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "74:2:2"
+            },
+            "returnParameters": {
+              "id": 226,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "89:0:2"
+            },
+            "scope": 229,
+            "src": "63:36:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 230,
+        "src": "36:66:2"
+      }
+    ],
+    "src": "0:102:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/F/Project10Token/token_sale/contracts/PSTokenSale.sol",
+    "exportedSymbols": {
+      "PSTokenSale": [
+        229
+      ]
+    },
+    "id": 230,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 224,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 229,
+        "linearizedBaseContracts": [
+          229
+        ],
+        "name": "PSTokenSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 227,
+              "nodeType": "Block",
+              "src": "89:10:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 228,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 225,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "74:2:2"
+            },
+            "returnParameters": {
+              "id": 226,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "89:0:2"
+            },
+            "scope": 229,
+            "src": "63:36:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 230,
+        "src": "36:66:2"
+      }
+    ],
+    "src": "0:102:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x63eAa90661Ccae153421d381c14871f8D0F1D7E2",
+      "transactionHash": "0xe03cf690c2f886c760a708d6be3ab65a79c0855349983f495df50ee50616e06a"
+    }
+  },
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-04-22T05:48:48.478Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
