@@ -63,8 +63,8 @@ App={
     var loader  = $('#loader');
     var content = $('#content');
 
-    loader.show();
-    content.hide();
+    //loader.show();
+    //content.hide();
     web3.eth.getCoinbase(function(err, account) {
       if(err === null) {
         App.account = account;
