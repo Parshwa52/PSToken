@@ -23,8 +23,26 @@
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
-
+var HDWalletProvider = require("truffle-hdwallet-provider");
+var mnemonic = "wealth bacon betray arrow panel weapon blood omit weasel earn maximum wrong";
 module.exports = {
+
+  networks: {
+    development: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 7545 ,         // Standard Ethereum port (default: none)
+       network_id: "*"       // Any network (default: none)
+      },
+    rinkeby: {
+      host: "127.0.0.1",
+      port: 8545,
+      provider: function() {
+        return new HDWalletProvider(mnemonic,"https://rinkeby.infura.io/v3/43a514f5b6fa4a6ab6d15aad78ee0523");
+      },
+      network_id: 4,
+      gas:4700000
+    }
+  },
   /**
    * Networks define how you connect to your ethereum client and let you set the
    * defaults web3 uses to send transactions. If you don't specify one truffle
@@ -35,18 +53,18 @@ module.exports = {
    * $ truffle test --network <network-name>
    */
 
-  networks: {
+  //networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
     // You should run a client (like ganache-cli, geth or parity) in a separate terminal
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
     //
-     development: {
-     host: "127.0.0.1",     // Localhost (default: none)
-     port: 8545 ,         // Standard Ethereum port (default: none)
-      network_id: "*"       // Any network (default: none)
-     }
+     //development: {
+     //host: "127.0.0.1",     // Localhost (default: none)
+     //port: 8545 ,         // Standard Ethereum port (default: none)
+      //network_id: "*"       // Any network (default: none)
+    // }
 
     // Another network with more advanced options...
     // advanced: {
@@ -75,7 +93,7 @@ module.exports = {
       // network_id: 2111,   // This network is yours, in the cloud.
       // production: true    // Treats this network as if it was a public net. (default: false)
     // }
-  },
+  //},
 
   // Set default mocha options here, use special reporters etc.
   mocha: {
