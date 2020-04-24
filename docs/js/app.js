@@ -10,7 +10,7 @@ App={
   tokensSold:0,
   tokensAvailable: 750000,
   init: function() {
-   // console.log("App initialized...")
+    console.log("App initialized...")
     return App.initWeb3();
   },
 
@@ -36,14 +36,14 @@ App={
       App.contracts.PSTokenSale = TruffleContract(psTokenSale);
       App.contracts.PSTokenSale.setProvider(App.web3Provider);
       App.contracts.PSTokenSale.deployed().then(function(psTokenSale) {
-        //console.log("PS Token Sale Address:", psTokenSale.address);
+        console.log("PS Token Sale Address:", psTokenSale.address);
       });
     }).done(function() {
         $.getJSON("PSToken.json", function(psToken) {
           App.contracts.PSToken = TruffleContract(psToken);
           App.contracts.PSToken.setProvider(App.web3Provider);
           App.contracts.PSToken.deployed().then(function(psToken) {
-            //console.log("PSToken Address:", psToken.address);
+            console.log("PSToken Address:", psToken.address);
           });
   
           App.listenForEvents();
@@ -77,7 +77,7 @@ App={
       return psTokenSaleInstance.tokenPrice();
     }).then(function(tokenPrice) {
       App.tokenPrice = tokenPrice;
-      //console.log(tokenPrice.toNumber());
+      console.log(tokenPrice.toNumber());
       $('.token-price').html(web3.fromWei(App.tokenPrice, "ether").toNumber());
       return psTokenSaleInstance.tokensSold();
     }).then(function(tokensSold){
@@ -85,7 +85,7 @@ App={
       $('.tokens-sold').html(App.tokensSold);
       $('.tokens-available').html(App.tokensAvailable);
       var progressPercent=(Math.ceil(App.tokensSold) / App.tokensAvailable) * 100;
-      //console.log(progressPercent);
+      console.log(progressPercent);
       $('#progress').css('width', progressPercent + '%');
       App.contracts.PSToken.deployed().then(function(instance) {
         psTokenInstance = instance;
