@@ -56,7 +56,7 @@ App={
   },
   render:function()
   {
-    /*if (App.loading) {
+    if (App.loading) {
       return;
     }
     App.loading = true;
@@ -65,7 +65,7 @@ App={
     var content = $('#content');
 
     loader.show();
-    content.hide();*/
+    content.hide();
     web3.eth.getCoinbase(function(err, account) {
       if(err === null) {
         App.account = account;
@@ -93,17 +93,17 @@ App={
         //return psTokenInstance.balanceOf(App.account);
       //}).then(function(balance) {
         //$('.dapp-balance').html(balance.toNumber());
-       // App.loading = false;
-        //loader.hide();
-        //content.show();
+       App.loading = false;
+        loader.hide();
+        content.show();
       //});
     });
     
   },
 
   buyTokens: function() {
-    //$('#content').hide();
-    //$('#loader').show();
+    $('#content').hide();
+    $('#loader').show();
     var numberOfTokens = $('#numberOfTokens').val();
     App.contracts.PSTokenSale.deployed().then(function(instance) {
       return instance.buyTokens(numberOfTokens, {
